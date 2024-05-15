@@ -1,0 +1,20 @@
+{% extends "admin/change_list.html" %}
+{% load static %}
+
+{% block extrahead %}
+  <style>
+    .custom-button {
+      margin-right: 100px; /* Adjust the margin as needed */
+    }
+  </style>
+{% endblock %}
+
+{% block object-tools-items %}
+  {{ block.super }}
+  <li  class="nav-item" style="list-style: none;">
+    <a href="{% url 'product_list' %}" class="btn btn-primary custom-button">
+      <i class="fas fa-qrcode mr-2"></i> Show QR List
+    </a>
+  </li>
+{% endblock %}
+

@@ -1,0 +1,10 @@
+app_id:
+app_secret:
+redirect: "http://localhost:3000/"
+scopes:
+    - user.read
+    - mailboxsettings.read
+    - calendars.readwrite
+authority: "https://login.microsoftonline.com/common"
+username:
+password:

@@ -1,0 +1,58 @@
+<!-- access_table_detail.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Permissions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        .detail {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .detail h2 {
+            margin-top: 0;
+            color: #666;
+        }
+        .detail p {
+            margin: 10px 0;
+        }
+        .detail label {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="detail">
+        <h2>User Permissions</h2>
+        <p><label>User:</label> {{ access_table.user.username }}</p>
+        <p><label>Categories:</label>
+            {% for category in access_table.category.all %}
+                {{ category.name }}{% if not forloop.last %}, {% endif %}
+            {% endfor %}
+        </p>
+        <p><label>Allowed Markets:</label>
+            {% for market in access_table.allowed_markets.all %}
+                {{ market.name }}{% if not forloop.last %}, {% endif %}
+            {% endfor %}
+        </p>
+        <p><label>Local Brands:</label>
+            {% for brand in access_table.local_brands.all %}
+                {{ brand.name }}{% if not forloop.last %}, {% endif %}
+            {% endfor %}
+        </p>
+    </div>
+</body>
+</html>

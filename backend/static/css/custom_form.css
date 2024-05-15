@@ -1,0 +1,54 @@
+/* custom_forms.css */
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+/* Content Container */
+#content-main {
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+/* Breadcrumbs */
+.breadcrumbs {
+    margin-bottom: 20px;
+    color: #888;  /* Adjust color to match Django's default */
+}
+
+.breadcrumbs a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.breadcrumbs a:hover {
+    text-decoration: underline;
+}
+
+/* Object Tools */
+.object-tools {
+    list-style: none;
+    padding: 0;
+}
+
+.object-tools li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.object-tools li:last-child {
+    margin-right: 0;
+}
+
+.errornote {
+    color: #dc3545;
+}
+
+/* Add more custom styles as needed */
